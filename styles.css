@@ -353,6 +353,19 @@ body {
   gap: 0.75rem;
 }
 
+.hero-tip {
+  margin: 1.35rem 0 0;
+  max-width: 34rem;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: #7a9485;
+}
+
+.hero-tip strong {
+  color: #a8c9b4;
+  font-weight: 600;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;

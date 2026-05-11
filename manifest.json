@@ -1,0 +1,19 @@
+{
+  "name": "RB TRADING — Beginners",
+  "short_name": "RB TRADING",
+  "description": "Free beginner guide: trading basics and a candlestick chart quiz. Educational only.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#030403",
+  "theme_color": "#152a1f",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
