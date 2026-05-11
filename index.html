@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RB TRADING — Beginners</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <svg class="candle-sprite" aria-hidden="true" focusable="false">
+      <defs>
+        <symbol id="cndl-bull" viewBox="0 0 12 34">
+          <line x1="6" y1="1" x2="6" y2="33" stroke="#3d5248" stroke-width="1.3" stroke-linecap="round" />
+          <rect x="2.5" y="6" width="7" height="18" rx="1" fill="#4d7a5f" />
+        </symbol>
+        <symbol id="cndl-bear" viewBox="0 0 12 34">
+          <line x1="6" y1="1" x2="6" y2="33" stroke="#3d5248" stroke-width="1.3" stroke-linecap="round" />
+          <rect x="2.5" y="12" width="7" height="14" rx="1" fill="#6b4548" />
+        </symbol>
+        <symbol id="cndl-doji" viewBox="0 0 12 34">
+          <line x1="6" y1="1" x2="6" y2="33" stroke="#3d5248" stroke-width="1.3" stroke-linecap="round" />
+          <rect x="3.5" y="14" width="5" height="4" rx="0.8" fill="#5a7060" />
+        </symbol>
+      </defs>
+    </svg>
+
+    <div class="candle-side candle-side--left" aria-hidden="true">
+      <div class="candle-float" style="top: 6%; left: 18%; --cf-rot: -8deg; --cf-scale: 0.95; --cf-o: 0.28">
+        <svg viewBox="0 0 12 34" width="20" height="56" preserveAspectRatio="xMidYMid meet"><use href="#cndl-bull" /></svg>
+      </div>
+      <div class="candle-float" style="top: 16%; left: 52%; --cf-rot: 14deg; --cf-scale: 0.72; --cf-o: 0.2">
+        <svg viewBox="0 0 12 34" width="16" height="46" preserveAspectRatio="xMidYMid meet"><use href="#cndl-bear" /></svg>
+      </div>
+      <div class="candle-float" style="top: 28%; left: 12%; --cf-rot: 6deg; --cf-scale: 1.05; --cf-o: 0.22">
+        <svg viewBox="0 0 12 34" width="22" height="58" preserveAspectRatio="xMidYMid meet"><use href="#cndl-doji" /></svg>
+      </div>
+      <div class="candle-float" style="top: 42%; left: 62%; --cf-rot: -14deg; --cf-scale: 0.88; --cf-o: 0.26">
+        <svg viewBox="0 0 12 34" width="19" height="52" preserveAspectRatio="xMidYMid meet"><use href="#cndl-bull" /></svg>
+      </div>
+      <div class="candle-float" style="top: 54%; left: 28%; --cf-rot: 10deg; --cf-scale: 0.68; --cf-o: 0.18">
+        <svg viewBox="0 0 12 34" width="15" height="44" preserveAspectRatio="xMidYMid meet"><use href="#cndl-bear" /></svg>
+      </div>
+      <div class="candle-float" style="top: 66%; left: 55%; --cf-rot: -5deg; --cf-scale: 1.12; --cf-o: 0.24">
+        <svg viewBox="0 0 12 34" width="23" height="60" preserveAspectRatio="xMidYMid meet"><use href="#cndl-bull" /></svg>
+      </div>
+      <div class="candle-float" style="top: 78%; left: 8%; --cf-rot: 18deg; --cf-scale: 0.78; --cf-o: 0.2">
+        <svg viewBox="0 0 12 34" width="17" height="48" preserveAspectRatio="xMidYMid meet"><use href="#cndl-bear" /></svg>
+      </div>
+      <div class="candle-float" style="top: 88%; left: 48%; --cf-rot: -11deg; --cf-scale: 0.82; --cf-o: 0.25">
+        <svg viewBox="0 0 12 34" width="18" height="50" preserveAspectRatio="xMidYMid meet"><use href="#cndl-doji" /></svg>
+      </div>
+    </div>
+
+    <div class="candle-side candle-side--right" aria-hidden="true">
+      <div class="candle-float" style="top: 9%; left: 58%; --cf-rot: 10deg; --cf-scale: 0.9; --cf-o: 0.24">
+        <svg viewBox="0 0 12 34" width="19" height="54" preserveAspectRatio="xMidYMid meet"><use href="#cndl-bear" /></svg>
+      </div>
+      <div class="candle-float" style="top: 21%; left: 22%; --cf-rot: -12deg; --cf-scale: 1; --cf-o: 0.26">
+        <svg viewBox="0 0 12 34" width="21" height="56" preserveAspectRatio="xMidYMid meet"><use href="#cndl-bull" /></svg>
+      </div>
+      <div class="candle-float" style="top: 34%; left: 68%; --cf-rot: 7deg; --cf-scale: 0.74; --cf-o: 0.19">
+        <svg viewBox="0 0 12 34" width="16" height="46" preserveAspectRatio="xMidYMid meet"><use href="#cndl-doji" /></svg>
+      </div>
+      <div class="candle-float" style="top: 46%; left: 38%; --cf-rot: -6deg; --cf-scale: 0.92; --cf-o: 0.22">
+        <svg viewBox="0 0 12 34" width="19" height="52" preserveAspectRatio="xMidYMid meet"><use href="#cndl-bull" /></svg>
+      </div>
+      <div class="candle-float" style="top: 58%; left: 72%; --cf-rot: 15deg; --cf-scale: 0.7; --cf-o: 0.17">
+        <svg viewBox="0 0 12 34" width="15" height="42" preserveAspectRatio="xMidYMid meet"><use href="#cndl-bear" /></svg>
+      </div>
+      <div class="candle-float" style="top: 70%; left: 18%; --cf-rot: -9deg; --cf-scale: 1.08; --cf-o: 0.27">
+        <svg viewBox="0 0 12 34" width="22" height="58" preserveAspectRatio="xMidYMid meet"><use href="#cndl-bull" /></svg>
+      </div>
+      <div class="candle-float" style="top: 82%; left: 55%; --cf-rot: 5deg; --cf-scale: 0.8; --cf-o: 0.21">
+        <svg viewBox="0 0 12 34" width="17" height="48" preserveAspectRatio="xMidYMid meet"><use href="#cndl-bear" /></svg>
+      </div>
+      <div class="candle-float" style="top: 92%; left: 32%; --cf-rot: -16deg; --cf-scale: 0.86; --cf-o: 0.23">
+        <svg viewBox="0 0 12 34" width="18" height="50" preserveAspectRatio="xMidYMid meet"><use href="#cndl-doji" /></svg>
+      </div>
+    </div>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#main" aria-label="RB TRADING home">
+          <svg
+            class="brand-logo"
+            viewBox="0 0 88 36"
+            width="56"
+            height="24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <defs>
+              <linearGradient id="logo-bull" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#8ec9a0" />
+                <stop offset="100%" stop-color="#3d6b4f" />
+              </linearGradient>
+              <linearGradient id="logo-bull2" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#4d7a5f" />
+                <stop offset="100%" stop-color="#6d9f7e" />
+              </linearGradient>
+            </defs>
+            <!-- R: stem candle -->
+            <line x1="7" y1="3" x2="7" y2="33" stroke="#5d8068" stroke-width="1.25" stroke-linecap="round" />
+            <rect x="4.5" y="8" width="5" height="14" rx="1" fill="url(#logo-bull)" />
+            <!-- R: top hook -->
+            <line x1="16" y1="4" x2="16" y2="13" stroke="#5d8068" stroke-width="1" stroke-linecap="round" />
+            <rect x="13.5" y="4" width="5" height="5" rx="0.8" fill="#6d9f7e" />
+            <!-- R: leg candle (bearish) -->
+            <line x1="24" y1="12" x2="24" y2="32" stroke="#5d8068" stroke-width="1" stroke-linecap="round" />
+            <rect x="21.5" y="14" width="5" height="11" rx="0.8" fill="#9a6568" />
+            <!-- B: spine -->
+            <line x1="40" y1="3" x2="40" y2="33" stroke="#5d8068" stroke-width="1.25" stroke-linecap="round" />
+            <!-- B: upper bump -->
+            <line x1="54" y1="5" x2="54" y2="14" stroke="#5d8068" stroke-width="1" stroke-linecap="round" />
+            <rect x="40" y="5" width="14" height="7" rx="1" fill="url(#logo-bull2)" />
+            <!-- B: lower bump -->
+            <line x1="56" y1="19" x2="56" y2="31" stroke="#5d8068" stroke-width="1" stroke-linecap="round" />
+            <rect x="40" y="18" width="16" height="9" rx="1" fill="url(#logo-bull)" />
+          </svg>
+          <span class="brand-text">RB TRADING</span>
+        </a>
+        <nav class="nav" aria-label="Main">
+          <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+          <div class="nav-panel">
+            <ul id="nav-list" class="nav-list">
+              <li><a href="#intro">Intro</a></li>
+              <li><a href="#quiz">Quiz</a></li>
+              <li><a href="#basics">Basics</a></li>
+              <li><a href="#risks">Risks</a></li>
+              <li><a href="#steps">Steps</a></li>
+              <li><a href="#glossary">Glossary</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="page-main">
+      <section class="hero">
+        <div class="wrap hero-inner">
+          <p class="hero-eyebrow">For beginners</p>
+          <h1>Learn trading with a plan</h1>
+          <p class="hero-lead">
+            This app helps people who are starting out: what trading is, how to read candlestick context, and why risk
+            matters—before you put real money on the line.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#quiz">Candlestick quiz</a>
+            <a class="btn btn-ghost" href="#intro">Intro</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="intro" class="section">
+        <div class="wrap">
+          <h2>What is trading?</h2>
+          <div class="intro-highlight">
+            <p>
+              Trading is the act of buying and selling assets—like stocks, currencies, cryptocurrencies, or goods—with
+              the goal of making a profit from price changes.
+            </p>
+            <p>
+              In simple terms: you buy something at a lower price and try to sell it at a higher price (or sometimes the
+              opposite, if you expect prices to fall).
+            </p>
+          </div>
+          <p class="section-intro">
+            In the quiz below you practice reading charts: what a highlighted candle often suggests when price is moving
+            up or down. That helps you think about <strong>when</strong> entries and exits are more logical and
+            <strong>when</strong> it is still too early to decide. Patterns are educational; on a live market always
+            confirm with context and risk controls.
+          </p>
+          <div class="cards">
+            <article class="card">
+              <h3>Learn first</h3>
+              <p>Use a demo account, books, videos, and small-size tests before you commit larger capital.</p>
+            </article>
+            <article class="card">
+              <h3>Rules and discipline</h3>
+              <p>Define when you enter, when you exit, and how much risk you accept per day or per trade.</p>
+            </article>
+            <article class="card">
+              <h3>Psychology</h3>
+              <p>Greed and fear often move markets inside your head faster than indicators—plan for emotions.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="quiz" class="section section-alt quiz-section" aria-labelledby="quiz-title">
+        <div class="wrap">
+          <h2 id="quiz-title">Candlestick quiz</h2>
+          <p class="section-intro">
+            Study the chart snippet. The highlighted candle is the one you must interpret—pick an answer, then read
+            the explanation before you continue.
+          </p>
+          <div id="quiz-root" class="quiz-root">
+            <div class="quiz-toolbar">
+              <span id="quiz-progress" class="quiz-progress" aria-live="polite">Question 1 / …</span>
+              <span id="quiz-score" class="quiz-score"></span>
+            </div>
+            <div id="quiz-chart" class="quiz-chart" role="img" aria-label="Candlestick chart snippet"></div>
+            <p id="quiz-scenario" class="quiz-scenario"></p>
+            <div id="quiz-choices" class="quiz-choices"></div>
+            <div id="quiz-feedback" class="quiz-feedback" hidden></div>
+            <div class="quiz-actions">
+              <button type="button" id="quiz-next" class="btn btn-primary" hidden>Next question</button>
+              <button type="button" id="quiz-restart" class="btn btn-ghost" hidden>Start over</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="basics" class="section">
+        <div class="wrap">
+          <h2>Basics to know</h2>
+          <ul class="checklist">
+            <li><strong>Lot size / leverage</strong> — how much exposure you trade and how much margin you post.</li>
+            <li><strong>Spread and commission</strong> — every trade has a cost; include it in your plan.</li>
+            <li><strong>Stop-loss / take-profit</strong> — predefined exit levels to cap risk and lock gains.</li>
+            <li><strong>Timeframe</strong> — a day trader works a different rhythm than a long-term investor.</li>
+            <li><strong>Regulation</strong> — use a regulated broker where possible and read their terms.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="risks" class="section">
+        <div class="wrap">
+          <div class="notice" role="note">
+            <h2>Risk warning</h2>
+            <p>
+              Trading can lead to losing your entire capital. Leverage magnifies both gains and losses. This app is not
+              financial advice and does not replace a professional adviser or your broker’s disclosures.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="steps" class="section section-alt">
+        <div class="wrap">
+          <h2>Practical steps to start</h2>
+          <ol class="steps">
+            <li>
+              <span class="step-num">1</span>
+              <div>
+                <h3>Set a goal</h3>
+                <p>Learning, side income, or a career path—your goal shapes how much time and capital you need.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <div>
+                <h3>Learn terms and the platform</h3>
+                <p>Start on demo, learn order types, and practice reading price and volume on charts.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <div>
+                <h3>Keep a trading journal</h3>
+                <p>After each trade note why you entered and what happened—this speeds up real learning.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">4</span>
+              <div>
+                <h3>Go live with small size</h3>
+                <p>When demo feels consistent, risk only money whose loss teaches you—not money you need for life.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="glossary" class="section">
+        <div class="wrap">
+          <h2>Short glossary</h2>
+          <dl class="glossary">
+            <div>
+              <dt>Asset</dt>
+              <dd>What you buy or sell (e.g. a currency pair, stock, index).</dd>
+            </div>
+            <div>
+              <dt>Bullish / bearish</dt>
+              <dd>Expectation of prices moving up / down.</dd>
+            </div>
+            <div>
+              <dt>Volatility</dt>
+              <dd>How strongly price swings—higher volatility means higher risk and opportunity.</dd>
+            </div>
+            <div>
+              <dt>Liquidity</dt>
+              <dd>How easily you can trade size without moving price too much.</dd>
+            </div>
+            <div>
+              <dt>Diversification</dt>
+              <dd>Spreading risk across instruments or strategies.</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p class="footer-legal">© RB TRADING — educational content only. Not investment advice.</p>
+        <p class="site-credit">
+          <span class="site-credit-label">Designed <span aria-hidden="true">&amp;</span> developed by</span>
+          <span class="site-credit-name">Rati Bersanadze</span>
+        </p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
